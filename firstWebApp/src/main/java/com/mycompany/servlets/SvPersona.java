@@ -85,8 +85,14 @@ public class SvPersona extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         
-          
-        processRequest(request, response);
+        List<Persona> personas = (List<Persona>) request.getSession().getAttribute("ListaPersonas");
+        String nombre = request.getParameter("nombre");
+        String edad = request.getParameter("edad");
+        String correo = request.getParameter("correo");
+        var newUser = new Persona(nombre,Integer.parseInt(edad),correo);
+        personas.add(newUser);
+        request.getSession().setAttribute("ListaPersonas", personas);
+        response.sendRedirect("personas.jsp");
     }
 
     /**

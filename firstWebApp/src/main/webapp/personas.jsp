@@ -1,3 +1,4 @@
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import = "java.util.List"%>
 <%@page import ="com.mycompany.models.Persona"%>
@@ -10,6 +11,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body class="bg-light">
+        <%@ include file="NavBar.jsp" %>
         <div class="container mt-5">
             <div class="card shadow-lg">
                 <div class="card-header bg-primary text-white text-center">
