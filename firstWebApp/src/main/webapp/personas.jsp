@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import = "java.util.List"%>
+<%@page import ="com.mycompany.models.Persona"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,7 +16,7 @@
     </head>
     <body>
         <% 
-List<Persona> personas = (List<Persona>) request.getSession().getAttribute("listaPersonas");
+List<Persona> personas = (List<Persona>) request.getSession().getAttribute("ListaPersonas");
 
 for(Persona persona : personas){
         %>
