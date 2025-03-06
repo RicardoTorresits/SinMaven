@@ -64,6 +64,7 @@ public class SvPersona extends HttpServlet {
         var daniel = new Persona("Daniel el viejo jenkins",23,"daniel@yopmail.com");
         var ricardo = new Persona("Ricardo Torres",27,"ricardo@yopmail.com");
     
+        
         var personas = new ArrayList<Persona>();
         personas.add(rafa);
         personas.add(mariana);
